@@ -3,88 +3,265 @@
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>train</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+	<title> MRT LINE 3 </title>
 <style>
  
-    body {
+    body 
+    {
       margin: 0;
       font-family: Arial, sans-serif;
+      background-color: #d7e4fa;
+      text-align: center;
     }
 
-    .navbar {
+    .navbar 
+    {
       display: flex;
       align-items: center;
       justify-content: space-between;
-      background-color: #a8ebff; 
+      background-color: #B7C5DA; 
       padding: 10px 20px;
     }
 
-    .navbar .logo {
+    .navbar .logo 
+    {
       display: flex;
       align-items: center;
     }
 
-     .navbar .logo img {
+    .navbar .logo img 
+    {
       height: 30px;
       margin-right: 10px;
     }
 
-    .navbar .nav-links {
+    .navbar .nav-links 
+    {
       display: flex;
       gap: 20px;
     }
 
-    .navbar .nav-links a {
+    .navbar .nav-links a 
+    {
       text-decoration: none;
-      color: black;
-      font-size: 16px;
+      color: #0f264f;
+      font-size: 20px;
+      font-weight: bolder;
+      font-family: sans-serif;
     }
 
-    .navbar .nav-links a:hover {
+    .navbar .nav-links a:hover 
+    {
       text-decoration: underline;
     }
 
-    .navbar .search-bar {
+    .navbar .search-bar 
+    {
       display: flex;
       align-items: center;
     }
 
-      .navbar .search-bar input[type="text"] {
+    .navbar .search-bar input[type="text"] 
+    {
       padding: 5px;
       border: 1px solid #ccc;
       border-radius: 4px;
       outline: none;
     }
 
-    .navbar .search-bar button {
-      background-color: #ffc107; / Yellow background /
+    .navbar .search-bar button 
+    {
+      background-color: #02122e; 
       border: none;
       padding: 5px 10px;
       margin-left: 5px;
       border-radius: 4px;
       cursor: pointer;
-      color: black;
+      color: white;
     }
 
-    .navbar .search-bar button:hover {
-      background-color: #e0a800; / Slightly darker yellow */
+    .navbar .search-bar button:hover 
+    {
+      background-color: #02122e;
+      color: white;
     }
-  </style>
+
+    #MRT
+    {
+      height:600px;
+      width:600px;
+      margin-left: 60px;
+      margin-right: 150px;
+    }
+
+    .container 
+    {
+      display: flex;
+    }
+
+</style>
 </head>
 <body>
- <div class="navbar">
-    <div class="logo">
-      <img src="logo-placeholder.png" alt="Logo">
-    </div>
-    <div class="nav-links">
-      <a href="#">Home</a>
-      <a href="#">Train Schedule</a>
-      <a href="#">Help</a>
-    </div>
-    <div class="search-bar">
-      <input type="text" placeholder="Search...">
-      <button>Search</button>
-    </div>
-  </div>
+
+<h1 style="color:#3868b5; background-image: url(https://i.pinimg.com/originals/bd/e8/31/bde8311914aec4d7812de732d236a1b8.gif); margin: 0px; text-align: center; font-size: 160px; padding-bottom:280px; padding-top: 40px; font-family: sans-serif; font-weight: bolder;"> MRT LINE 3 </h1>
+
+<center>
+
+<div class="navbar">
+<div class="logo">
+  <img style="width: 40px; height: 40px; margin-left: 30px;"src="https://cdn.pixabay.com/photo/2018/02/18/20/34/locomotive-3163448_1280.png" alt="Logo" >
+</div>
+<div class="nav-links">
+  <a href="index.html">Home</a>
+  <a href="page1.html">Train Schedule</a>
+  <a href="page2.html">Help</a>
+</div>
+<div class="search-bar">
+  <input type="text" placeholder="Search...">
+  <button style="margin-right: 30px;">Search</button>
+</div>
+</div>
+
+</center>
+
+<br><br>
+
+<div class="container">
+<div class="MRTmap">
+  <a href="https://www.deiville.com/map-guide-to-manilas-lrt-and-mrt-stations/" target="_blank"><img class="rounded" src="https://www.deiville.com/wp-content/uploads/2023/03/map-of-lrt-line-1-2-and-mrt-3-stations.jpg" alt="map" id="MRT"></a>
+</div> 
+
+<form>
+  
+<div class="col-25">
+  <label style="color:#0a295e ; font-weight: bolder; font-family: monaco, monospace; font-size:20px; margin:0px;" > Select a Ticket Type:</label> 
+  <select class= "form-select" id= "type">
+  <option value= "none"> Ticket Types...</option> 
+  <option value= "1">Regular Singular Journey</option> 
+  <option value= "180">Six Months Journey</option> 
+  <option value= "360">Twelve Months Journey</option> 
+  </select> 
+
+<br>
+
+  <label style="color:#0a295e ; font-weight: bold; font-family: monaco, monospace; font-size:20px; margin: 0px;">Leaving from:</label> 
+  <select class= "form-select" id= "start_station">
+  <option value= "none">Leaving from:</option> 
+  <option value= "0">STATION Quezon ave</option> 
+  <option value= "0">STATION GMA Kauming</option> 
+  <option value= "3">STATION Araneta Cubao</option>
+  <option value= "3">STATION Santolan Annapolis</option>
+  <option value= "7">STATION Ortigas</option> 
+  <option value= "7">STATION Shaw Blvd.</option>    
+  <option value= "7">STATION Boni</option> 
+  <option value= "11">STATION Guadalupe</option>
+  <option value= "11">STATION Buendia</option>  
+  <option value= "11">STATION Ayala</option> 
+  <option value= "15">STATION Magallanes</option> 
+  <option value= "15">STATIO  Taft Ave.</option>   
+  </select> 
+
+<br> 
+
+  <label style="color:#0a295e ; font-weight: bold; font-family: monaco, monospace; font-size:20px; margin: 0px;">Going to:</label> 
+
+  <select class= "form-select" id= "end_station">
+  <option value= "none">Going to:</option> 
+  <option value= "0">STATION Quezon ave</option> 
+  <option value= "0">STATION GMA Kauming</option> 
+  <option value= "3">STATION Araneta Cubao</option>
+  <option value= "3">STATION Santolan Annapolis</option>
+  <option value= "7">STATION Ortigas</option> 
+  <option value= "7">STATION Shaw Blvd.</option>    
+  <option value= "7">STATION Boni</option> 
+  <option value= "11">STATION Guadalupe</option>
+  <option value= "11">STATION Buendia</option>  
+  <option value= "11">STATION Ayala</option> 
+  <option value= "15">STATION Magallanes</option> 
+  <option value= "15">STATIO  Taft Ave.</option> 
+  </select> 
+
+<br>
+
+  <label style="color:#0a295e ; font-weight: bold; font-family: monaco, monospace; font-size:20px; margin: 0px;"> Select a payment priviledge:  </label> 
+
+  <select class= "form-select" id= "discount">
+  <option value= "none">Discounts...</option> 
+  <option value= "0.80"> PWD </option> 
+  <option value= "0.80"> Student</option> 
+  <option value= "0.80"> Senior Citizens</option> 
+  </select> 
+
+<br> 
+
+  <button type="submit" class="btn" style="background-color:#0a295e ; color:white; font-family: monaco, monospace; font-size:20px; width: 150px;" onclick="discountTotal()" id="discount_total">Discount</button>
+  <button type="submit" class="btn" style="background-color:#0a295e ; color:white; font-family: monaco, monospace; font-size:20px; width: 100px;" onclick="Final()" id="Price">Price</button>
+
+<br><br>
+
+  <label style="color:#0a295e ; font-weight: bold; font-family: monaco, monospace; font-size:20px; margin: 0px;">Full name:</label>
+  <input type="text" id="Name" class="form-control">
+
+<br>
+
+  <label style="color:#0a295e ; font-weight: bold; font-family: monaco, monospace; font-size:20px; margin: 0px;">Email: </label>
+  <input type="email" id="email" class="form-control">
+
+<br>
+
+  <button type="submit" class="btn" style="background-color:#0a295e ; color:white; font-family: moncao, monospace; font-size:20px;  width: 100px" onclick="Submit()" id="send">Send</button>  
+
+</div> 
+</div>
+</div>
+</form>
+
+<br>
+
+<hr style="border: 10px solid #0a295e;">
+
+<p style="font-style: italic; color:#0a295e ; font-size:10px; font-family:monaco, monospace;">Cabrillos, Martina Alexandra || Ubana, Aurora Ishtar</p>
+
+<p style="font-style: italic; color:#0a295e ; font-size:10px; font-family:monaco, monospace;">9 - Topaz S.Y. 2024 - 2025</p>
+
+<a href="" target="_blank"style="font-style: italic; color:#0a295e ; font-size:10px; font-family:monaco, monospace;">Source</a>
+
+<br><br>
+
+<script>
+
+function Submit()
+    {
+    var name=document.getElementById("Name").value;
+      window.alert("Kindly proceed to the next instructions," + name);
+    }
+
+function Final()
+    {
+    var num1=document.getElementById("type").value; 
+    var num2=document.getElementById("start_station").value; 
+    var num3=document.getElementById("end_station").value; 
+    var differenceStation= Number(num3) - Number(num2);
+    var basevalue= 13;
+    var total= Number(basevalue) + Number(differenceStation);
+    var ticketMultiply= Number(num1) * Number(total);
+    window.alert("Your total price is:" + ticketMultiply);
+    }
+function discountTotal()
+    {
+    var num1=document.getElementById("type").value; 
+    var num2=document.getElementById("start_station").value; 
+    var num3=document.getElementById("end_station").value; 
+    var differenceStation= Number(num3) - Number(num2);
+    var basevalue= 13;
+    var total= Number(basevalue) + Number(differenceStation);
+    var ticketMultiply= Number(num1) * Number(total);
+    var num4=document.getElementById("discount").value; 
+    var finalTotal= (Number(ticketMultiply) * Number(num4)).toFixed(2);
+    window.alert("Your total price is: " + finalTotal);
+    }
+
+</script>
 </body>
 </html>
